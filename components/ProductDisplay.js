@@ -1,3 +1,5 @@
+//TODO: import "product-details"
+
 app.component("product-display", {
   props: {
     premium: {
@@ -78,7 +80,6 @@ app.component("product-display", {
       return this.variants[this.selectedVariant].quantity;
     },
     shipping() {
-      console.log(this.premium);
       if (this.premium) {
         return "Free";
       } else {
