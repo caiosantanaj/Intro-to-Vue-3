@@ -1,9 +1,21 @@
 const app = Vue.createApp({
-    data() {
-        return {
-            cart: 0,
-            premium: true
-        }
+  data() {
+    return {
+      cart: [],
+      premium: true,
+    };
+  },
+  methods: {
+    addToCart(id) {
+      this.cart.push(id);
     },
-    methods: {}
-})
+
+    removeFromCart(id) {
+      const index = this.cart.lastIndexOf(id);
+
+      if (index > -1) {
+        this.cart.splice(index, 1);
+      }
+    },
+  },
+});
