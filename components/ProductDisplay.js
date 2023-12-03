@@ -1,5 +1,3 @@
-//TODO: import "product-details"
-
 app.component("product-display", {
   props: {
     premium: {
@@ -23,9 +21,8 @@ app.component("product-display", {
 
           <p>Shipping: {{ shipping }}</p>
 
-          <ul>
-            <li v-for="detail in details">{{ detail }}</li>
-          </ul>
+          <!-- <ul><li v-for="detail in details">{{ detail }}</li></ul> -->
+          <product-details :details="details"></product-details>
 
           <div 
             v-for="(variant, index) in variants" 
